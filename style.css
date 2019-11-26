@@ -8,6 +8,9 @@ header {
     width: 375px;
     height: 80px;
 }
+h1 {
+    font-size: 20px;
+}
 
 .header-row {
     display: flex;
@@ -28,21 +31,26 @@ header {
     height: auto;
 }
 .bar-border {
-    height: 50px;
-    width: 320px; 
+    height: 80px;
+    width: 300px; 
     border: 1px solid white;
-    border-radius: 5px;
     margin: 10px;
 }
 
 .bar {
     width: 0%;    
-    height: 50px;
-    border-radius: 5px;
-    background: darkslategray;
-    font-size: 20px;
+    height: 80px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
     animation: showProgress 4s forwards; 
     transition: ease-out;
+
+}
+
+p {
+    margin: 0px;
+    padding: 10px;
 }
 
 
@@ -55,19 +63,19 @@ header {
 }
 
 .feelgood {
-   
+  background: green;
 }
 
 .feelblue {
-   
+   background: blue;
 }
 
 .dance {
-
+background: purple;
 }
 
 .energy {
-   
+   background: orangered;
 }
 
 footer {
