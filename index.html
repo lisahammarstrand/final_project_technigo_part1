@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Sound affects | Music by mode</title>
 </head>
 
+<div id="overlay"></div>
+
 <body>
     <header id="header">
-        <div class="header-container"></div>
         <div class="header-row">
             <div class="header-logo">
-                <img src="headphones_white.png" alt="logo">
+                <img src="headphones_white.svg" alt="headphones-logo">
             </div>
             <h1>MUSIC BY MODE</h1>
             <div class="hamburger-icon">
-                <img src="hamburger_white.png" alt="">
+                <img src="hamburger_white_new.png" alt="hamburger_menu_icon">
                 <a href=""></a>
             </div>
         </div>
     </header>
-
+    <!-- Accordion -->
     <section class="playlists-container">
         <div class="bar-border">
             <div class="bar feelgood">
                 <p>FEEL GOOD</p>
             </div>
         </div>
-        <iframe src="https://open.spotify.com/embed/track/6HJasLoTKvxglAMQH8nPcD" width="300" height="80"
-            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed/track/72Dd7GCaepMi8ktuXxmSZF" width="300" height="80"
-            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe src="https://open.spotify.com/embed/track/6J7WMB5GII6pEOzy687jhO" width="300" height="80"
-            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!-- Set id to call from javascript file -->
+        <div class="song-container1" id="feelgoodlist">
+            <iframe src="https://open.spotify.com/embed/track/6HJasLoTKvxglAMQH8nPcD" width="300" height="80"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/72Dd7GCaepMi8ktuXxmSZF" width="300" height="80"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/6J7WMB5GII6pEOzy687jhO" width="300" height="80"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
         <div class="bar-border">
             <div class="bar feelblue">
                 <p>FEEL BLUE</p>
@@ -52,12 +57,16 @@
             </div>
         </div>
     </section>
+
     <footer>
         <p>&copy LHP 2019</p>
-
     </footer>
+
     <script src="script.js"></script>
-    <script></script>
+    <script src="feelgooddata.js"></script>
+    <script src="bluedata.js"></script>
+    <script src="dancedata.js"></script>
+    <script src="energydata.js"></script>
 </body>
 
 </html>

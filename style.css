@@ -1,8 +1,29 @@
+ *, ::after, ::before {
+    box-sizing: border-box;
+  } 
+
 body {
-    background: black;
+    width: 375px;
+    background-image: url("concert_background_650x488.jpg");
+    /*background: black;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+   /* display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer; /* Add a pointer on hover */
+} 
 
 header {
     width: 375px;
@@ -22,31 +43,60 @@ h1 {
     height: 40px;
 }
 
-.hamburger-icon img {
+.hamburger-icon {
     height: 40px;
 }
 
 .playlist-container {
-    width: 350px;
+    width: 302px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+/* Accordion question */
 .bar-border {
     height: 80px;
-    width: 300px; 
+    width: 302px; 
     border: 1px solid white;
     margin: 10px;
 }
 
 .bar {
     width: 0%;    
-    height: 80px;
+    height: 78px;
     font-size: 24px;
     display: flex;
     align-items: center;
     animation: showProgress 4s forwards; 
     transition: ease-out;
+}
+/* Accordion question hover - set effect */
+.bar-border:hover {
 
 }
+
+/* Accordion question active - set classList in javascript */
+.active {
+
+}
+
+/* Accordion answer */
+.song-container1 {
+    width: 302px;
+    height: auto;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+/* Show accordion answer. Set id in html and call from javascrip with document.getElementByID document.getElementById("feelgoodlist").onclick = toggle */
+.active + .song-container1 {
+    /* display: block; */
+  }
 
 p {
     margin: 0px;
@@ -80,4 +130,8 @@ background: purple;
 
 footer {
     height: 50px;
+}
+
+footer p {
+    font-size: 14px;
 }
