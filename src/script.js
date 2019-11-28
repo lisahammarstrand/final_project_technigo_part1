@@ -1,6 +1,4 @@
 
-//import { feelTheEnergy } from "energydata.js";
-
 // getRandomTracks function can be used for all the tracklists. Just pass in the array you want to get three tracks from.
 const getRandomTracks = tracksArray => {
     let pickedTracks = []; // reset the pickedTracks array so we get three fresh ones.
@@ -11,6 +9,55 @@ const getRandomTracks = tracksArray => {
     // Get sub-array of first 3 elements after we shuffled the list. Does not include the end argument.
     pickedTracks = shuffled.slice(0, 3);
     return pickedTracks;
+};
+
+
+const showFeelGoodTracks = () => {
+    document.getElementById("feelgoodContainer").innerHTML = "";
+    document.getElementById("feelgoodContainer").classList.toggle("hide");
+
+    console.log(feelGood);
+    let randomTracks = getRandomTracks(feelGood.audio_features);
+
+    randomTracks.forEach(track => {
+        let trackSource = `https://open.spotify.com/embed/track/${track.id}`;
+        document.getElementById(
+            "feelgoodContainer"
+        ).innerHTML += `<iframe src=${trackSource} width=“300" height=80”
+    frameborder=“0" allowtransparency=“true” allow=“encrypted-media”></iframe>`;
+    });
+};
+
+const showBlueTracks = () => {
+    document.getElementById("blueContainer").innerHTML = "";
+    document.getElementById("blueContainer").classList.toggle("hide");
+
+    console.log(feelBlue);
+    let randomTracks = getRandomTracks(feelBlue.audio_features);
+
+    randomTracks.forEach(track => {
+        let trackSource = `https://open.spotify.com/embed/track/${track.id}`;
+        document.getElementById(
+            "blueContainer"
+        ).innerHTML += `<iframe src=${trackSource} width=“300" height=80”
+    frameborder=“0" allowtransparency=“true” allow=“encrypted-media”></iframe>`;
+    });
+};
+
+const showDanceTracks = () => {
+    document.getElementById("danceContainer").innerHTML = "";
+    document.getElementById("danceContainer").classList.toggle("hide");
+
+    console.log(feelLikeDancing);
+    let randomTracks = getRandomTracks(feelLikeDancing.audio_features);
+
+    randomTracks.forEach(track => {
+        let trackSource = `https://open.spotify.com/embed/track/${track.id}`;
+        document.getElementById(
+            "danceContainer"
+        ).innerHTML += `<iframe src=${trackSource} width=“300" height=80”
+    frameborder=“0" allowtransparency=“true” allow=“encrypted-media”></iframe>`;
+    });
 };
 
 const showEnergyTracks = () => {
@@ -29,5 +76,7 @@ const showEnergyTracks = () => {
     });
 };
 
+document.getElementById("feelgoodButton").onclick = showFeelGoodTracks;
+document.getElementById("blueButton").onclick = showBlueTracks;
+document.getElementById("danceButton").onclick = showDanceTracks;
 document.getElementById("energyButton").onclick = showEnergyTracks; // Klicka på knappen och start funktionen.
-console.log(showEnergyTracks)

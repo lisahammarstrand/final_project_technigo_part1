@@ -7,9 +7,7 @@
 }*/
 
 body {
-    width: 375px;
     background-image: url("concert_background_650x488.jpg");
-    /*background: black;*/
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -31,7 +29,6 @@ body {
 
 header {
     height: 80px;
-    /*width: 375px;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,11 +41,14 @@ header img {
     height: 40px;
 }
 
-#hamburger-icon {
-    height: 25px;
-}
+header a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px;
+} 
 
-.playlist-container {
+.playlists-container {
     width: 302px;
     height: auto;
     display: flex;
@@ -78,16 +78,33 @@ header img {
 cursor: pointer;
 }
 
-/* Accordion question active - set classList in javascript */
-.active {
-
+/* Accordion answer */
+#feelgoodContainer {
+    width: 302px;
+    height: auto;
+    border: 1px solid white;
+    margin: 10px;
 }
 
-/* Accordion answer */
+#blueContainer {
+    width: 302px;
+    height: auto;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+#danceContainer {
+    width: 302px;
+    height: auto;
+    border: 1px solid white;
+    margin: 10px;
+}
+
 #energyContainer {
     width: 302px;
     height: auto;
     border: 1px solid white;
+    margin: 10px;
     /*display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +114,8 @@ cursor: pointer;
 
 .hide {
     display: none;
-    transition: xxxx
+    /* animation: showProgressPlayList 4s forwards; 
+    transition: ease-out; */
 }
 
 /* Show accordion answer. Set id in html and call from javascrip with document.getElementByID document.getElementById("").onclick = toggle */
@@ -112,12 +130,13 @@ p {
 
 
 @keyframes showProgress {
-0% { width: 0%;
+0% { width: 0%;}
+100% { width: 90%;}
 }
-100% { 
-    width: 90%;
+ @keyframes showProgressPlayList {
+0% { height: 0%;}
+100% { height: 100%;}
  }
-}
 
 .feelgood {
   background: green;
