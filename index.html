@@ -12,6 +12,7 @@
 
 <div id="overlay"></div>
 <div id="overlay2" onclick="off()">
+    <div id="close">X</div>
     <div id="overlay2-text">
         <p class="p-overlay2-text">CHECKING OUT SOME OF</p>
         <h2>Spotify Audio Features & Analysis</h2>
@@ -42,33 +43,42 @@
     </header>
     <!-- Accordion -->
     <section class="playlists-container">
-        <div class="bar-border" id="feelgoodButton">
-            <div class="bar feelgood">
-                <p>FEEL GOOD</p>
-            </div>
-        </div>
-        <div id="feelgoodContainer" class="hide"></div>
 
-        <div class="bar-border" id="blueButton">
-            <div class="bar feelblue">
-                <p>FEEL BLUE</p>
+        <div class="list-container">
+            <div class="bar-border" id="feelgoodButton">
+                <div class="bar feelgood">
+                    <p>FEEL GOOD</p>
+                </div>
             </div>
+            <div id="feelgoodContainer" class="hide"></div>
         </div>
-        <div id="blueContainer" class="hide"></div>
 
-        <div class="bar-border" id="danceButton">
-            <div class="bar dance">
-                <p>FEEL LIKE DANCING</p>
+        <div class="list-container">
+            <div class="bar-border" id="blueButton">
+                <div class="bar feelblue">
+                    <p>FEEL BLUE</p>
+                </div>
             </div>
+            <div id="blueContainer" class="hide"></div>
         </div>
-        <div id="danceContainer" class="hide"></div>
 
-        <div class="bar-border" id="energyButton">
-            <div class="bar energy">
-                <p>FEEL THE ENERGY</p>
+        <div class="list-container">
+            <div class="bar-border" id="danceButton">
+                <div class="bar dance">
+                    <p>FEEL LIKE DANCING</p>
+                </div>
             </div>
+            <div id="danceContainer" class="hide"></div>
         </div>
-        <div id="energyContainer" class="hide"></div>
+
+        <div class="list-container">
+            <div class="bar-border" id="energyButton">
+                <div class="bar energy">
+                    <p>FEEL THE ENERGY</p>
+                </div>
+            </div>
+            <div id="energyContainer" class="hide"></div>
+        </div>
     </section>
 
     <footer>

@@ -15,7 +15,6 @@ body {
 }
 #overlay {
     position: fixed; /* Sit on top of the page content */
-   /* display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
@@ -23,8 +22,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
-    /*cursor: pointer; /* Add a pointer on hover */
+    z-index: -1; /* Specify a stack order */
 } 
 
 #overlay2 {
@@ -41,6 +39,12 @@ body {
     cursor: pointer;
     }
 
+#close {
+    font-size: 24px;
+    float: right;
+    margin: 16px;
+    }
+
  #overlay2-text {
     position: absolute;
     width: 250px;
@@ -50,14 +54,17 @@ body {
     color: white;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+    /* overflow: scroll; Not working */ 
  }   
+
  .p-overlay2-text {
-padding: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
  }
 
  h2 {
     margin: 10px 0px 20px 0px;
  }
+
 #h5good {
     display: inline-block;
     background: green;
@@ -73,6 +80,7 @@ padding: 10px 0px 10px 0px;
     margin: 20px 0px 0px 0px;
     border: 0.5px solid white;
 }
+
 #h5dance {
     display: inline-block;
     background: purple;
@@ -95,6 +103,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-right: 16px;
+    margin-left: 16px;
 }
 h1 {
     font-size: 20px;
@@ -112,12 +121,10 @@ button {
     border: 1px solid white;
     padding: 5px;
 }
-/*header a {
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 5px;
-} */
+/* Not working */
+button:hover {
+    cursor: pointer;
+}
 
 .playlists-container {
     width: 302px;
@@ -127,7 +134,7 @@ button {
     justify-content: center;
     align-items: center;
 }
-/* Accordion question */
+/* Accordion "question" */
 .bar-border {
     height: 80px;
     width: 302px; 
@@ -146,10 +153,10 @@ button {
 }
 /* Accordion question hover - set effect */
 .bar-border:hover {
-cursor: pointer;
+    cursor: pointer;
 }
 
-/* Accordion answer */
+/* Accordion "answer" */
 #feelgoodContainer {
     width: 302px;
     height: auto;
@@ -176,23 +183,13 @@ cursor: pointer;
     height: auto;
     border: 1px solid white;
     margin: 10px;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*display: block; */
 }
 
 .hide {
     display: none;
-    /* animation: showProgressPlayList 4s forwards; 
+   /* animation: showPlayList 4s forwards; 
     transition: ease-out; */
 }
-
-/* Show accordion answer. Set id in html and call from javascrip with document.getElementByID document.getElementById("").onclick = toggle */
-/* .hide + #energyContainer {
-    display: block; 
-  }*/
 
 p {
     margin: 0px;
@@ -204,10 +201,10 @@ p {
 0% { width: 0%;}
 100% { width: 90%;}
 }
- @keyframes showProgressPlayList {
+/* @keyframes showPlayList {
 0% { height: 0%;}
 100% { height: 100%;}
- }
+ } */
 
 .feelgood {
   background: green;
@@ -231,8 +228,33 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-right: 16px;
+    margin-left: 16px;
 }
 
 footer p {
     font-size: 12px;
+}
+
+@media (min-width: 650px) {
+    #overlay2-text {
+        width: 350px;
+        top: 40%;
+        left: 40%;
+     } 
+     .playlists-container {
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       align-items: unset;
+    }
+}
+
+@media (min-width: 900px) {
+    #overlay2-text {
+        width: 500px;
+        top: 50%;
+        left: 50%;
+     } 
 }
