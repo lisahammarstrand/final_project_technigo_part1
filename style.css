@@ -2,6 +2,10 @@
     box-sizing: border-box;
   } 
 
+/*html {
+    background: black;
+}*/
+
 body {
     width: 375px;
     background-image: url("concert_background_650x488.jpg");
@@ -20,31 +24,28 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
     /*cursor: pointer; /* Add a pointer on hover */
 } 
 
 header {
-    width: 375px;
     height: 80px;
+    /*width: 375px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 h1 {
     font-size: 20px;
 }
 
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-logo img {
+header img {
     height: 40px;
 }
 
-.hamburger-icon {
-    height: 40px;
+#hamburger-icon {
+    height: 25px;
 }
 
 .playlist-container {
@@ -74,7 +75,7 @@ h1 {
 }
 /* Accordion question hover - set effect */
 .bar-border:hover {
-
+cursor: pointer;
 }
 
 /* Accordion question active - set classList in javascript */
@@ -83,20 +84,26 @@ h1 {
 }
 
 /* Accordion answer */
-.song-container1 {
+#energyContainer {
     width: 302px;
     height: auto;
     border: 1px solid white;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    /*display: block; */
 }
-/* Show accordion answer. Set id in html and call from javascrip with document.getElementByID document.getElementById("feelgoodlist").onclick = toggle */
-.active + .song-container1 {
-    /* display: block; */
-  }
+
+.hide {
+    display: none;
+    transition: xxxx
+}
+
+/* Show accordion answer. Set id in html and call from javascrip with document.getElementByID document.getElementById("").onclick = toggle */
+/* .hide + #energyContainer {
+    display: block; 
+  }*/
 
 p {
     margin: 0px;
@@ -108,7 +115,7 @@ p {
 0% { width: 0%;
 }
 100% { 
-    width: 85%;
+    width: 90%;
  }
 }
 
@@ -133,5 +140,5 @@ footer {
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 12px;
 }

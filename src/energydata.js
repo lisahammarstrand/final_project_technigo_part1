@@ -155,28 +155,6 @@ const feelTheEnergy = {
             "time_signature": 4
         },
         {
-            "song": "More Than You Know",
-            "artist": "Axwell Ingrosso",
-            "danceability": 0.645,
-            "energy": 0.741,
-            "key": 5,
-            "loudness": -4.989,
-            "mode": 0,
-            "speechiness": 0.0339,
-            "acousticness": 0.0323,
-            "instrumentalness": 0,
-            "liveness": 0.29,
-            "valence": 0.534,
-            "tempo": 123.07,
-            "type": "audio_features",
-            "id": "4q8PHoRsPUB52LFylX8Ulz",
-            "uri": "spotify:track:4q8PHoRsPUB52LFylX8Ulz",
-            "track_href": "https://api.spotify.com/v1/tracks/4q8PHoRsPUB52LFylX8Ulz",
-            "analysis_url": "https://api.spotify.com/v1/audio-analysis/4q8PHoRsPUB52LFylX8Ulz",
-            "duration_ms": 203000,
-            "time_signature": 4
-        },
-        {
             "song": "Walk Idiot Walk",
             "artist": "The Hives",
             "danceability": 0.623,

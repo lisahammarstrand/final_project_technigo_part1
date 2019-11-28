@@ -14,15 +14,11 @@
 
 <body>
     <header id="header">
-        <div class="header-row">
-            <div class="header-logo">
-                <img src="headphones_white.svg" alt="headphones-logo">
-            </div>
-            <h1>MUSIC BY MODE</h1>
-            <div class="hamburger-icon">
-                <img src="hamburger_white_new.png" alt="hamburger_menu_icon">
-                <a href=""></a>
-            </div>
+        <img src="headphones_white.svg" alt="headphones-logo">
+        <h1>MUSIC BY MODE</h1>
+        <a href="">
+            <img id="hamburger-icon" src="hamburger_white_new.png" alt="hamburger_menu_icon">
+        </a>
         </div>
     </header>
     <!-- Accordion -->
@@ -33,14 +29,14 @@
             </div>
         </div>
         <!-- Set id to call from javascript file -->
-        <div class="song-container1" id="feelgoodlist">
+        <!-- <div class="song-container1" id="feelgoodlist">
             <iframe src="https://open.spotify.com/embed/track/6HJasLoTKvxglAMQH8nPcD" width="300" height="80"
                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/track/72Dd7GCaepMi8ktuXxmSZF" width="300" height="80"
                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/track/6J7WMB5GII6pEOzy687jhO" width="300" height="80"
                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
+        </div>-->
         <div class="bar-border">
             <div class="bar feelblue">
                 <p>FEEL BLUE</p>
@@ -51,22 +47,23 @@
                 <p>FEEL LIKE DANCING</p>
             </div>
         </div>
-        <div class="bar-border">
+        <div class="bar-border" id="energyButton">
             <div class="bar energy">
                 <p>FEEL THE ENERGY</p>
             </div>
         </div>
+        <div id="energyContainer" class="hide"></div>
     </section>
 
     <footer>
         <p>&copy LHP 2019</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="feelgooddata.js"></script>
-    <script src="bluedata.js"></script>
-    <script src="dancedata.js"></script>
-    <script src="energydata.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/feelgooddata.js"></script>
+    <script src="src/bluedata.js"></script>
+    <script src="src/dancedata.js"></script>
+    <script src="src/energydata.js"></script>
 </body>
 
 </html>
