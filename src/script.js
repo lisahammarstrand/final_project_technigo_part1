@@ -80,3 +80,11 @@ document.getElementById("feelgoodButton").onclick = showFeelGoodTracks;
 document.getElementById("blueButton").onclick = showBlueTracks;
 document.getElementById("danceButton").onclick = showDanceTracks;
 document.getElementById("energyButton").onclick = showEnergyTracks; // Klicka på knappen och start funktionen.
+
+function on() {
+    document.getElementById("overlay2").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay2").style.display = "none";
+}

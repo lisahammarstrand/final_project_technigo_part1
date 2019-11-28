@@ -7,7 +7,7 @@
 }*/
 
 body {
-    background-image: url("concert_background_650x488.jpg");
+    background-image: url("concert_background_1280x960.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -27,11 +27,74 @@ body {
     /*cursor: pointer; /* Add a pointer on hover */
 } 
 
+#overlay2 {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+    }
+
+ #overlay2-text {
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+ }   
+ .p-overlay2-text {
+padding: 10px 0px 10px 0px;
+ }
+
+ h2 {
+    margin: 10px 0px 20px 0px;
+ }
+#h5good {
+    display: inline-block;
+    background: green;
+    padding: 2px;
+    margin: 20px 0px 0px 0px;
+    border: 0.5px solid white;
+}
+
+#h5blue {
+    display: inline-block;
+    background: blue;
+    padding: 2px;
+    margin: 20px 0px 0px 0px;
+    border: 0.5px solid white;
+}
+#h5dance {
+    display: inline-block;
+    background: purple;
+    padding: 2px;
+    margin: 20px 0px 0px 0px;
+    border: 0.5px solid white;
+}
+
+#h5energy {
+    display: inline-block;
+    background: orangered;
+    padding: 2px;
+    margin: 20px 0px 0px 0px;
+    border: 0.5px solid white;
+}
+
 header {
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 16px;
 }
 h1 {
     font-size: 20px;
@@ -41,12 +104,20 @@ header img {
     height: 40px;
 }
 
-header a {
+button {
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px;
+}
+/*header a {
     color: white;
     text-decoration: none;
     border: 1px solid white;
     padding: 5px;
-} 
+} */
 
 .playlists-container {
     width: 302px;
@@ -156,6 +227,10 @@ background: purple;
 
 footer {
     height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16px;
 }
 
 footer p {
