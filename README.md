@@ -14,7 +14,7 @@ The objective for this final project was to practice and apply all parts include
 * Should be deployed on Netlify
 * Follow code guide lines
 
-I choose to use an API from Spotify – Audio Features & Analysis. It turned ut that the authentification was complicated, so I ended up deriving data from the API and storing it in my project instead. I used the data to create 4 different category playlists based on 4 "mode" categories, to learn more about how Spotify evaluates the songs compared to my own perception. I picked tracks randomly and checked their values. If I had more time I would create graphs for each song with the values I've chosen, and do some more research.
+I choose to use an API from Spotify – Audio Features & Analysis. It turned ut that the authentification was complicated, so I ended up deriving data from the API and storing it in my project instead. I used the data to create 4 different category playlists based on 4 "mode" categories, to learn more about how Spotify evaluates the songs. I picked tracks randomly and checked their values. If I had more time I would create graphs for each song with the values I've chosen, and do some more research.
 
 I have used CSS keyframes for animations, JavaScript toggle function to show/hide playlists, sorting, randomizing, and show/hide overlay. Things to fix that I couldn't figure out just yet:
 * Transition on playlist
@@ -22,3 +22,5 @@ I have used CSS keyframes for animations, JavaScript toggle function to show/hid
 * Overflow scroll on overlay text
 * Pointer cursor, not working
 * Finetune responsiveness
+* Cross browser compatibility
+* Accessibility
