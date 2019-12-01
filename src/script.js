@@ -1,12 +1,12 @@
 
-// getRandomTracks function can be used for all the tracklists. Just pass in the array you want to get three tracks from.
+// getRandomTracks function used for all tracklists. Pass in the array to get three tracks from.
 const getRandomTracks = tracksArray => {
-    let pickedTracks = []; // reset the pickedTracks array so we get three fresh ones.
+    let pickedTracks = []; // reset the pickedTracks array to get three fresh ones.
 
     // Shuffle the array randomly
     const shuffled = tracksArray.sort(() => 0.5 - Math.random());
 
-    // Get sub-array of first 3 elements after we shuffled the list. Does not include the end argument.
+    // Sub-array of first 3 elements after list is shuffled. Does not include end argument.
     pickedTracks = shuffled.slice(0, 3);
     return pickedTracks;
 };
@@ -62,13 +62,13 @@ const showDanceTracks = () => {
 
 const showEnergyTracks = () => {
     document.getElementById("energyContainer").innerHTML = ""; // reset the DOM
-    document.getElementById("energyContainer").classList.toggle("hide"); //detta gömmer och visar energyContainer eftersom vi sätter av och på klassen "hide"
+    document.getElementById("energyContainer").classList.toggle("hide"); //Hide and show energyContainer since toggle (off/on) class "hide"
 
-    console.log(feelTheEnergy); // bara för att se vilken data vi har energy.audio_features är själva arrayen.
-    let randomTracks = getRandomTracks(feelTheEnergy.audio_features); // call getRandomTracks to select three out of an array. Save those three to a new array called randomTracks
+    console.log(feelTheEnergy); // To check what data we have. energy.audio_features is the array.
+    let randomTracks = getRandomTracks(feelTheEnergy.audio_features); // Call getRandomTracks to select three out of an array. Save those three to a new array called randomTracks.
 
     randomTracks.forEach(track => {
-        let trackSource = `https://open.spotify.com/embed/track/${track.id}`; // tydligare att skapa trackSource såhär, lägger till id på slutet
+        let trackSource = `https://open.spotify.com/embed/track/${track.id}`; // More clear to create trackSource like this, adds id at end.
         document.getElementById(
             "energyContainer"
         ).innerHTML += `<iframe src=${trackSource} width=“300" height=80”
@@ -79,7 +79,7 @@ const showEnergyTracks = () => {
 document.getElementById("feelgoodButton").onclick = showFeelGoodTracks;
 document.getElementById("blueButton").onclick = showBlueTracks;
 document.getElementById("danceButton").onclick = showDanceTracks;
-document.getElementById("energyButton").onclick = showEnergyTracks; // Klicka på knappen och start funktionen.
+document.getElementById("energyButton").onclick = showEnergyTracks; // Click to start function.
 
 function on() {
     document.getElementById("overlay2").style.display = "block";

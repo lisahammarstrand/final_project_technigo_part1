@@ -129,8 +129,8 @@ button {
     padding: 5px;
     cursor: pointer;
 }
-/* Not working */
-.about:hover {
+
+button:hover {
     cursor: pointer;
 }
 
@@ -161,12 +161,13 @@ button {
     animation: showProgress 4s forwards; 
     transition: ease-out;
 }
-/* Accordion question hover - set effect */
-div .bar-border:hover {
+
+.bar-border:hover {
     cursor: pointer;
 }
 
 /* Accordion "answer" */
+/* Transition/animation - how? */
 #feelgoodContainer {
     width: 302px;
     height: auto;
@@ -197,8 +198,6 @@ div .bar-border:hover {
 
 .hide {
     display: none;
-   /* animation: showPlayList 4s forwards; 
-    transition: ease-out; */
 }
 
 p {
@@ -210,26 +209,21 @@ p {
 0% { width: 0%;}
 100% { width: 90%;}
 }
-/* Set animation on playlist*/
-/* @keyframes showPlayList {
-0% { height: 0%;}
-100% { height: 100%;}
- } */
 
 .feelgood {
-  background: green;
+    background: green;
 }
 
 .feelblue {
-   background: blue;
+    background: blue;
 }
 
 .dance {
-background: purple;
+    background: purple;
 }
 
 .energy {
-   background: orangered;
+    background: orangered;
 }
 
 footer {
