@@ -50,7 +50,7 @@ body {
     margin: 16px;
     }
 
- #overlay2-text {
+#overlay2-text {
     position: absolute;
     width: 275px;
     height: 500px;
@@ -63,11 +63,11 @@ body {
     overflow: auto;  
  }   
 
- .p-overlay2-text {
+.p-overlay2-text {
     padding: 10px 0px 10px 0px;
  }
 
- h2 {
+h2 {
     margin: 10px 0px 20px 0px;
  }
 
@@ -166,13 +166,19 @@ button:hover {
     cursor: pointer;
 }
 
+p {
+    margin: 0px;
+    padding: 10px;
+}
+
 /* Accordion "answer" */
-/* Transition/animation - how? */
 #feelgoodContainer {
     width: 302px;
     height: auto;
     border: 1px solid white;
     margin: 10px;
+    animation: showPlaylist 2s forwards; 
+    transition: ease-out;
 }
 
 #blueContainer {
@@ -180,6 +186,8 @@ button:hover {
     height: auto;
     border: 1px solid white;
     margin: 10px;
+    animation: showPlaylist 2s forwards; 
+    transition: ease-out;
 }
 
 #danceContainer {
@@ -187,6 +195,8 @@ button:hover {
     height: auto;
     border: 1px solid white;
     margin: 10px;
+    animation: showPlaylist 2s forwards; 
+    transition: ease-out;
 }
 
 #energyContainer {
@@ -194,21 +204,35 @@ button:hover {
     height: auto;
     border: 1px solid white;
     margin: 10px;
+    animation: showPlaylist 2s forwards; 
+    transition: ease-out;
 }
-
+/* Transition/animation on hide playlist - how */
 .hide {
+    /*animation: hidePlaylist 3s forwards; 
+    transition: ease; */
     display: none;
 }
 
-p {
-    margin: 0px;
-    padding: 10px;
+iframe {
+    border: none;
 }
+
 
 @keyframes showProgress {
 0% { width: 0%;}
 100% { width: 90%;}
 }
+
+@keyframes showPlaylist {
+    0% { height: 0;}
+    100% { height: 250px;}
+    }
+
+/*@keyframes hidePlaylist {
+    0% { height: 250px;}
+    100% { height: 0;}
+    }*/
 
 .feelgood {
     background: green;
@@ -236,7 +260,9 @@ footer {
     margin-left: 16px;
 }
 
-footer p {
+.p-footer {
+    margin: 0px;
+    padding: 10px 0px;
     font-size: 12px;
 }
 
@@ -254,12 +280,16 @@ footer p {
         
         }
      .playlists-container {
+        top: 30px;
         width: 95%;
         height: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-       align-items: unset;
+        align-items: unset;
+    }
+    footer {
+        top: 100px;
     }
 }
 
