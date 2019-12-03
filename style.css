@@ -277,7 +277,10 @@ footer {
         top: 24px;
         right: 24px;
         font-size: 24px;
-        
+        }
+    header {
+        margin-right: 24px;
+        margin-left: 24px;
         }
      .playlists-container {
         top: 30px;
@@ -290,6 +293,8 @@ footer {
     }
     footer {
         top: 100px;
+        margin-right: 24px;
+        margin-left: 24px;
     }
 }
 
@@ -300,4 +305,12 @@ footer {
         top: 50%;
         left: 50%;
      } 
+     header {
+        margin-right: 32px;
+        margin-left: 32px;
+        } 
+    footer {
+        margin-right: 32px;
+        margin-left: 32px;
+    }
 }
