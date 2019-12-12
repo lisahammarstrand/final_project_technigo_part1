@@ -81,10 +81,10 @@ document.getElementById("blueButton").onclick = showBlueTracks;
 document.getElementById("danceButton").onclick = showDanceTracks;
 document.getElementById("energyButton").onclick = showEnergyTracks; // Click to start function.
 
-function on() {
+const on = () => {
     document.getElementById("overlay2").style.display = "block";
 }
 
-function off() {
+const off = () => {
     document.getElementById("overlay2").style.display = "none";
 }

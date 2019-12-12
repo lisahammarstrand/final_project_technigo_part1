@@ -15,7 +15,7 @@ body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
 }
-/* Sit on top of the page content and cover 100% of page */
+/* Sits on top of the page content and cover 100% of page */
 #overlay {
     position: fixed; 
     width: 100%;
@@ -64,43 +64,34 @@ body {
  }   
 
 .p-overlay2-text {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
  }
 
 h2 {
     margin: 10px 0px 20px 0px;
  }
 
-#h5good {
+ h5 {
     display: inline-block;
-    background: green;
     padding: 2px;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px;
     border: 0.5px solid white;
+ }
+
+#h5good {
+    background: green;
 }
 
 #h5blue {
-    display: inline-block;
     background: blue;
-    padding: 2px;
-    margin: 20px 0px 0px 0px;
-    border: 0.5px solid white;
 }
 
 #h5dance {
-    display: inline-block;
     background: purple;
-    padding: 2px;
-    margin: 20px 0px 0px 0px;
-    border: 0.5px solid white;
 }
 
 #h5energy {
-    display: inline-block;
     background: orangered;
-    padding: 2px;
-    margin: 20px 0px 0px 0px;
-    border: 0.5px solid white;
 }
 
 header {
@@ -216,6 +207,8 @@ p {
 
 iframe {
     border: none;
+    animation: showTrack 2s forwards;
+    transition: ease-out;
 }
 
 
@@ -227,6 +220,11 @@ iframe {
 @keyframes showPlaylist {
     0% { height: 0;}
     100% { height: 250px;}
+    }
+
+@keyframes showTrack {
+    0% { height: 0;}
+    100% { height: 80px;}
     }
 
 /*@keyframes hidePlaylist {
