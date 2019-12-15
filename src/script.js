@@ -82,9 +82,9 @@ document.getElementById("danceButton").onclick = showDanceTracks;
 document.getElementById("energyButton").onclick = showEnergyTracks; // Click to start function.
 
 const on = () => {
-    document.getElementById("overlay2").style.display = "block";
+    document.getElementById("about-overlay").style.display = "block";
 }
 
 const off = () => {
-    document.getElementById("overlay2").style.display = "none";
+    document.getElementById("about-overlay").style.display = "none";
 }

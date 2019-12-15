@@ -16,7 +16,7 @@ body {
     height: 100%;
 }
 /* Sits on top of the page content and cover 100% of page */
-#overlay {
+.bg-image-overlay {
     position: fixed; 
     width: 100%;
     height: 100%; 
@@ -28,7 +28,7 @@ body {
     z-index: 0; /* Stack order */
 } 
 
-#overlay2 {
+#about-overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -50,7 +50,7 @@ body {
     margin: 16px;
     }
 
-#overlay2-text {
+.about-overlay-text {
     position: absolute;
     width: 275px;
     height: 500px;
@@ -63,7 +63,7 @@ body {
     overflow: auto;  
  }   
 
-.p-overlay2-text {
+.p-overlay-text {
     padding: 10px 0;
  }
 
@@ -78,19 +78,19 @@ h2 {
     border: 0.5px solid white;
  }
 
-#h5good {
+.h5good {
     background: green;
 }
 
-#h5blue {
+.h5blue {
     background: blue;
 }
 
-#h5dance {
+.h5dance {
     background: purple;
 }
 
-#h5energy {
+.h5energy {
     background: orangered;
 }
 
@@ -198,10 +198,8 @@ p {
     animation: showPlaylist 2s forwards; 
     transition: ease-out;
 }
-/* Transition/animation on hide playlist - how */
+/* Transition/animation on hide playlist still to fix */
 .hide {
-    /*animation: hidePlaylist 3s forwards; 
-    transition: ease; */
     display: none;
 }
 
@@ -226,11 +224,6 @@ iframe {
     0% { height: 0;}
     100% { height: 80px;}
     }
-
-/*@keyframes hidePlaylist {
-    0% { height: 250px;}
-    100% { height: 0;}
-    }*/
 
 .feelgood {
     background: green;
@@ -265,13 +258,13 @@ footer {
 }
 
 @media (min-width: 650px) {
-    #overlay2-text {
+    .about-overlay-text {
         width: 350px;
         height: unset;
         top: 45%;
         left: 50%;
      } 
-     #close {
+    #close {
         top: 24px;
         right: 24px;
         font-size: 24px;
@@ -280,7 +273,7 @@ footer {
         margin-right: 24px;
         margin-left: 24px;
         }
-     .playlists-container {
+    .playlists-container {
         top: 30px;
         width: 100%;
         height: auto;
@@ -297,16 +290,19 @@ footer {
 }
 
 @media (min-width: 900px) {
-    #overlay2-text {
+    .about-overlay-text {
         width: 500px;
         height: unset;
         top: 50%;
         left: 50%;
      } 
-     header {
+    header {
         margin-right: 32px;
         margin-left: 32px;
         } 
+    .playlists-container {
+        width: 100%;
+        }
     footer {
         margin-right: 32px;
         margin-left: 32px;
